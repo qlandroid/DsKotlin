@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/qmui_topbar_height"
+            android:background="@color/qmui_config_color_white"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:qmui_skin_background="attr/app_skin_common_background">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/qmui_config_color_white">
+
+            <EditText
+
+                    android:id="@+id/rejectEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:background="@drawable/custom_edittext_background"
+                    android:gravity="start"
+                    android:textSize="14sp"
+                    android:hint="请输入内容"
+                    android:lines="6"
+                    android:padding="@dimen/activity_horizontal_margin" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/rejectHintTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColor="@color/app_color_red" />
+
+
+        <com.qmuiteam.qmui.layout.QMUIButton
+                android:id="@+id/rejectBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/btn_radius"
+                android:enabled="false"
+                android:text="提交"
+                android:textColor="@color/qmui_config_color_white" />
+    </LinearLayout>
+
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true" />
+
+
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>

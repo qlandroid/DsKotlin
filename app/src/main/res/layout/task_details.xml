@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/task_btn_group"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    app:leftIcon="@drawable/icon_failed"
+                    app:title_background="@drawable/ripple_bg"
+                    app:children_background="?attr/app_content_bg_color"
+                    android:id="@+id/task_details_process"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:hint="全部信息"
+                    app:navClickable="true"
+                    app:rightIconHide="false"
+                    app:title="工序详情" />
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    app:leftIcon="@drawable/my_change_pw"
+                    android:background="?attr/app_content_bg_color"
+                    android:id="@+id/task_details_produce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    app:title="产品" />
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    app:title_background="@drawable/ripple_bg"
+                    app:children_background="?attr/app_content_bg_color"
+                    android:id="@+id/task_details_dev"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    app:hint="请择设备"
+                    app:leftIcon="@drawable/fun_device"
+                    app:navClickable="true"
+                    app:rightIconHide="false"
+                    app:title="计划使用设备信息">
+
+                <LinearLayout
+                        android:id="@+id/task_details_dev_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/margin_normal"
+                        android:paddingBottom="@dimen/margin_normal">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_dev_empty" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="请选择设备"
+                            android:textColor="@color/color_number_9"
+                            android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/task_details_dev_toDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/ripple_bg"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_normal"
+                        android:paddingBottom="@dimen/margin_normal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查看设备详情"
+                            android:textColor="@color/color_number_9" />
+
+                    <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:src="@drawable/forward_arrow" />
+                </LinearLayout>
+            </com.feiling.dasong.widget.NavDetailsView>
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/task_details_opt_dev"
+                    app:leftIcon="@drawable/fun_device"
+                    app:title_background="@drawable/ripple_bg"
+                    app:children_background="?attr/app_content_bg_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    app:title="实际操作设备">
+
+                <LinearLayout
+                        android:id="@+id/task_details_opt_dev_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/app_content_bg_color"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/margin_normal"
+                        android:paddingBottom="@dimen/margin_normal">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_dev_empty" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="请选择设备"
+                            android:textColor="@color/color_number_9"
+                            android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/task_details_opt_dev_toDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/ripple_bg"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/margin_normal"
+                        android:paddingBottom="@dimen/margin_normal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查看设备详情"
+                            android:textColor="@color/color_number_9" />
+
+                    <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_marginLeft="@dimen/margin_normal"
+                            android:src="@drawable/forward_arrow" />
+                </LinearLayout>
+
+            </com.feiling.dasong.widget.NavDetailsView>
+
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/task_details_employee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    app:title_background="@drawable/ripple_bg"
+                    app:children_background="?attr/app_content_bg_color"
+                    app:hint="去选择"
+                    app:leftIcon="@drawable/icon_group"
+                    app:navClickable="true"
+                    app:rightIconHide="false"
+                    app:title="操作人员配置">
+
+                <LinearLayout
+                        android:id="@+id/task_details_employee_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/app_content_bg_color"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/margin_normal"
+                        android:paddingBottom="@dimen/margin_normal">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_dev_empty" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="请添加操作人/组"
+                            android:textColor="@color/color_number_9"
+                            android:textSize="12sp" />
+                </LinearLayout>
+            </com.feiling.dasong.widget.NavDetailsView>
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/task_details_record_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.feiling.dasong.widget.DivView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/task_btn_group" />
+
+    <LinearLayout
+            android:id="@+id/task_btn_group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_height"
+            android:layout_alignParentBottom="true"
+            android:background="?attr/app_content_bg_color"
+            android:orientation="horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+
+    </LinearLayout>
+
+
+</merge>

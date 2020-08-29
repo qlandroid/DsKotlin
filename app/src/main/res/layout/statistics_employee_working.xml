@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/margin_normal">
+
+                <LinearLayout
+                        android:id="@+id/statEmployeeWorkingStartBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_radius_blue2"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="开始时间"
+                            android:textColor="@color/qmui_config_color_white" />
+
+                    <TextView
+                            android:id="@+id/statEmployeeWorkingStartDateTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2020-10-23"
+                            android:textColor="@color/qmui_config_color_white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/statEmployeeWorkingEndBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_radius_red"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="结束时间"
+                            android:textColor="@color/qmui_config_color_white" />
+
+                    <TextView
+                            android:id="@+id/statEmployeeWorkingEndDateTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2020-10-23"
+                            android:textColor="@color/qmui_config_color_white" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/statEmployeeWorkingUserNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    android:paddingBottom="10dp"
+                    app:leftIcon="@drawable/icon_group_member"
+                    app:title="用户信息" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/bg_radius_white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingTop="20dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="20dp">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@android:drawable/btn_star_big_on" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:text="总工时"
+                        android:textColor="@color/color_number_9" />
+
+                <TextView
+                        android:id="@+id/statEmployeeWorkingTotalNdv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="1200"
+                        android:textColor="@color/app_color_red"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="分钟"
+                        android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:background="?attr/app_content_bg_color"
+                    android:id="@+id/statEmployeeWorkingProcessNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="100dp"
+                    android:paddingBottom="10dp"
+                    app:leftIcon="@drawable/fun_scheduling"
+                    app:title="工序详情">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView xmlns:tools="http://schemas.android.com/tools"
+                            android:id="@+id/statEmployeeWorkingProcessRv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            tools:listitem="@layout/item_nav_details"
+                            tools:itemCount="2"/>
+                </RelativeLayout>
+
+            </com.feiling.dasong.widget.NavDetailsView>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+            android:id="@+id/statEmployeeWorkingBottomGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_height"
+            android:layout_alignParentBottom="true">
+
+        <TextView
+                android:id="@+id/statEmployeeWorkingAuditBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/btn_radius"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="一键审核"
+                android:textColor="@color/qmui_config_color_white" />
+    </FrameLayout>
+
+
+</merge>

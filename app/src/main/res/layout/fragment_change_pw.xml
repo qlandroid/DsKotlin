@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/qmui_topbar_height"
+            android:background="@color/qmui_config_color_white"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:qmui_skin_background="attr/app_skin_common_background">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@color/qmui_config_color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingTop="10dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="90sp"
+                    android:layout_height="wrap_content"
+                    android:text="密码" />
+
+            <EditText
+                    android:id="@+id/changePwEt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edittext_background"
+                    android:gravity="right"
+                    android:hint="请输入密码"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginTop="1px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/qmui_config_color_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/margin_normal"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="90sp"
+                    android:layout_height="wrap_content"
+                    android:text="确认密码" />
+
+            <EditText
+                    android:id="@+id/changePwAgainEt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_edittext_background"
+                    android:gravity="right"
+                    android:hint="请输入密码"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/changePwHintTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textColor="@color/app_color_red"
+                android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true" />
+
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>

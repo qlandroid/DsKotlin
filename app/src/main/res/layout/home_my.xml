@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.feiling.dasong.widget.ReboundScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/qmui_topbar_height"
+            android:fitsSystemWindows="true"
+            app:qmui_skin_background="attr/app_skin_common_background">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/qmui_config_color_white"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/margin_normal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当前登录人信息" />
+
+
+                <com.feiling.dasong.widget.LabelTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        app:label="所属部门"
+                        app:labelSize="12sp"
+                        app:labelWidth="90sp"
+                        app:text="FFF0000xx" />
+
+                <com.feiling.dasong.widget.LabelTextView
+                        android:id="@+id/myUserNameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        app:label="姓名"
+                        app:labelSize="12sp"
+                        app:labelWidth="90sp"
+                        app:text="王五" />
+
+                <com.feiling.dasong.widget.LabelTextView
+                        android:id="@+id/myUserCodeTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        app:label="工号"
+                        app:labelSize="12sp"
+                        app:labelWidth="90sp"
+                        app:text="FFF0000xx"
+                        app:textSize="14sp" />
+
+            </LinearLayout>
+
+            <com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView
+                    android:id="@+id/myListGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            <TextView
+                    android:id="@+id/myLogoutBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/btn_radius"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:text="退出登录"
+                    android:textColor="@color/qmui_config_color_white" />
+
+
+        </LinearLayout>
+
+    </com.feiling.dasong.widget.ReboundScrollView>
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true" />
+</merge>

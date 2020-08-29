@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/task_btn_group"
+            android:orientation="vertical">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                <com.feiling.dasong.widget.NavDetailsView
+                        android:id="@+id/processCheckProcessView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin_normal"
+                        app:children_background="?attr/app_content_bg_color"
+                        app:leftIcon="@drawable/fun_arrange"
+                        app:title="工序详情"
+                        app:title_background="?attr/app_click_color" />
+
+                <com.feiling.dasong.widget.NavDetailsView
+                        android:id="@+id/processCheckProductView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:paddingBottom="@dimen/margin_normal"
+                        app:children_background="?attr/app_content_bg_color"
+                        app:leftIcon="@drawable/fun_my_work_stat"
+                        app:title="产品"
+                        app:title_background="?attr/app_click_color" />
+
+                <com.feiling.dasong.widget.NavDetailsView
+                        app:title_background="?attr/app_click_color"
+                        android:id="@+id/processCheckFailedNdv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:visibility="visible"
+                        app:children_background="?attr/app_content_bg_color"
+                        app:leftIcon="@drawable/fun_apply"
+                        app:title="异常信息描述">
+                    <FrameLayout
+                            android:background="?attr/app_content_bg_color"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:minLines="6"
+                                android:id="@+id/processCheckFailedMsgTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/activity_horizontal_margin"
+                                android:background="@drawable/custom_edittext_background"
+                                android:padding="@dimen/margin_normal"
+                                android:text="描述信息"
+                                android:textSize="14sp" />
+                    </FrameLayout>
+
+                </com.feiling.dasong.widget.NavDetailsView>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                    android:id="@+id/processCheckStatusIv"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="right|top"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:alpha="0.5"
+                    android:src="@drawable/icon_audit_success" />
+        </FrameLayout>
+
+
+    </ScrollView>
+
+
+    <com.feiling.dasong.widget.DivView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/processCheckBtnGroup" />
+
+    <LinearLayout
+            android:id="@+id/processCheckBtnGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/qmui_config_color_white"
+            android:orientation="horizontal"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:visibility="gone">
+
+
+    </LinearLayout>
+
+
+</merge>

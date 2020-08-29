@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <com.feiling.dasong.widget.NavDetailsView
+                app:title_background="?attr/app_click_color"
+                app:children_background="?attr/app_content_bg_color"
+                android:id="@+id/statWorkingDetailsProcessNdv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hint="工序详情"
+                app:leftIcon="@drawable/icon_dev_empty"
+                app:rightIconHide="false"
+                app:title="工序信息" />
+
+        <com.feiling.dasong.widget.NavDetailsView
+                app:title_background="?attr/app_click_color"
+                app:children_background="?attr/app_content_bg_color"
+                android:id="@+id/statWorkingDetailsUserNdv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:leftIcon="@drawable/icon_group_member"
+                app:title="员工信息" />
+
+
+        <FrameLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/bg_radius_white"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingTop="10dp"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="10dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="统计工时"
+                            android:textColor="@color/color_number_5"
+                            android:textSize="12sp" />
+
+                    <TextView
+                            android:id="@+id/statWorkingDetailsPlanTimerTv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:hint="请输入工时"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:text="400.00"
+                            android:textColor="@color/app_color_red"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="分钟"
+                            android:textColor="@color/color_number_9"
+                            android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:id="@+id/statWorkingDetailsAuditTimerGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingTop="10dp"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingBottom="10dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="审核工时"
+                            android:textColor="@color/color_number_5"
+                            android:textSize="12sp" />
+
+                    <EditText
+                            android:id="@+id/statWorkingDetailsAuditTimerEt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/custom_edittext_background"
+                            android:gravity="right"
+                            android:hint="请输入工时"
+                            android:inputType="number"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="10dp"
+                            android:textSize="12sp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="分钟"
+                            android:textColor="@color/color_number_9"
+                            android:textSize="10sp" />
+                </LinearLayout>
+
+                <TextView
+                        android:id="@+id/statWorkingDetailsAuditBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/btn_radius"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp"
+                        android:text="审核完成"
+                        android:textColor="@color/qmui_config_color_white" />
+
+            </LinearLayout>
+
+            <com.feiling.dasong.widget.StatusTagTextView
+                    android:id="@+id/statWorkingDetailsStatusTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:padding="6dp"
+                    android:text="未审核"
+                    android:textColor="@color/qmui_config_color_white"
+                    android:textSize="10sp"
+                    app:backgroundColor="@color/app_color_red" />
+        </FrameLayout>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="100dp" />
+    </LinearLayout>
+</merge>

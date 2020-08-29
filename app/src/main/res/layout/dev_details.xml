@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.feiling.dasong.widget.NavDetailsView
+            app:leftIcon="@drawable/fun_device"
+            android:background="?attr/app_content_bg_color"
+            android:id="@+id/devDetailsBaseNdv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="设备基本信息" />
+
+    <com.feiling.dasong.widget.NavDetailsView
+            android:background="?attr/app_content_bg_color"
+            app:leftIcon="@drawable/fun_scheduling"
+            android:id="@+id/devDetailsAttrNdv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:title="设备属性">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:background="@color/qmui_config_color_white"
+                    android:id="@+id/devDetailsAttrRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </com.feiling.dasong.widget.NavDetailsView>
+
+
+    <com.feiling.dasong.widget.NavDetailsView
+            app:leftIcon="@drawable/icon_group"
+            android:background="?attr/app_content_bg_color"
+            android:id="@+id/devDetailsGroupNdv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:title="负责组">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/devDetailsGroupRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </com.feiling.dasong.widget.NavDetailsView>
+
+    <com.feiling.dasong.widget.NavDetailsView
+            android:id="@+id/devDetailsEmplNdv"
+            android:layout_width="match_parent"
+            android:background="?attr/app_content_bg_color"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            app:title="负责人">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/devDetailsPrincipalRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </com.feiling.dasong.widget.NavDetailsView>
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="200dp" />
+</merge>

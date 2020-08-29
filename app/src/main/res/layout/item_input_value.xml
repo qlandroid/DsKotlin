@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/qmui_config_color_white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/margin_normal"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/margin_normal">
+
+    <TextView xmlns:tools="http://schemas.android.com/tools"
+            tools:text="身高"
+            android:id="@+id/input_value_label_tv"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            />
+
+    <EditText
+            android:id="@+id/input_value_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_edittext_background"
+            android:gravity="right"
+            android:hint="请输入内容"
+            android:padding="@dimen/margin_normal"
+            android:textSize="14sp"
+            android:autofillHints="0" />
+
+    <TextView
+            android:id="@+id/input_value_end_tv"
+            android:textSize="12sp"
+            android:textColor="@color/color_number_9"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="单位"/>
+</LinearLayout>

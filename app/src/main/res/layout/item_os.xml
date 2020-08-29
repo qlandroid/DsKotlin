@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@drawable/bg_radius_white"
+            android:padding="10dp">
+
+        <com.feiling.dasong.widget.NavDetailsView
+                android:id="@+id/itemOsNdv"
+                app:rightIconHide="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+    </FrameLayout>
+
+    <TextView
+            android:id="@+id/itemOsIndexTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_radius_red"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="第一个"
+            android:textColor="@color/qmui_config_color_white"
+            android:textStyle="bold|italic" />
+</FrameLayout>

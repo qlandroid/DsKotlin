@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/qmui_config_color_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="10dp">
+
+        <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:text="员工姓名" />
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext_background"
+                android:padding="10dp"
+                android:textSize="12sp" />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_search_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/qmui_config_color_white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="10dp">
+
+        <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:text="员工编码" />
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext_background"
+                android:padding="10dp"
+                android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/qmui_config_color_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="10dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="审核状态" />
+
+        <RadioGroup
+                android:gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未审核" />
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已审核" />
+
+            <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全部" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/qmui_config_color_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="10dp">
+
+        <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:text="工序名称" />
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext_background"
+                android:padding="10dp"
+                android:textSize="12sp" />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_search_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/qmui_config_color_white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="10dp">
+
+        <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:text="工序编码" />
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext_background"
+                android:padding="10dp"
+                android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/qmui_config_color_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="10dp">
+
+        <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:text="合同号" />
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext_background"
+                android:padding="10dp"
+                android:textSize="12sp" />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/qmui_s_checkbox" />
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/qmui_config_color_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="10dp">
+
+        <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:text="生产订单号" />
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext_background"
+                android:padding="10dp"
+                android:textSize="12sp" />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/qmui_s_checkbox" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/qmui_config_color_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="10dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="10dp">
+
+        <TextView
+                android:layout_width="120sp"
+                android:layout_height="wrap_content"
+                android:text="加工单号" />
+
+        <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext_background"
+                android:padding="10dp"
+                android:textSize="12sp" />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/qmui_s_checkbox" />
+    </LinearLayout>
+</LinearLayout>

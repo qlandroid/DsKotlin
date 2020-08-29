@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+    <com.feiling.dasong.widget.ResizableImageView
+            android:layout_gravity="center"
+            android:id="@+id/itemSelectImgIv"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/btn_add"
+            android:contentDescription="@null" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+            android:contentDescription="@string/remove_img"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/itemSelectImgRemoveIv"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:src="@drawable/btn_remove" />
+</FrameLayout>

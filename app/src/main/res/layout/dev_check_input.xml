@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/devCheckInputOrderDetailsNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/qmui_config_color_white"
+                    android:paddingBottom="@dimen/margin_normal"
+                    app:leftIcon="@drawable/icon_search_normal"
+                    app:title="点检任务" />
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/devCheckInputDevDetailsNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    android:paddingBottom="@dimen/margin_normal"
+                    app:hint="设备详情"
+                    app:leftIcon="@drawable/icon_dev_empty"
+                    app:rightIconHide="false"
+                    app:title="点检设备" />
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    app:title_background="?attr/app_click_color"
+                    app:children_background="?attr/app_content_bg_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    app:leftIcon="@drawable/btn_edit"
+                    app:title="点检项目" />
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/devCheckInputRv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_input_value" />
+            </RelativeLayout>
+
+            <LinearLayout
+                    android:id="@+id/bottomTabBtnGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_tab_height"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    android:orientation="vertical">
+
+                <com.feiling.dasong.widget.DivView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                <com.qmuiteam.qmui.layout.QMUIButton
+                        android:id="@+id/devCheckInputSubmitBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="6dp"
+                        android:background="@drawable/btn_radius"
+                        android:text="提交"
+                        android:textColor="@color/qmui_config_color_white"
+                        android:textSize="14sp" />
+            </LinearLayout>
+
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_300" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

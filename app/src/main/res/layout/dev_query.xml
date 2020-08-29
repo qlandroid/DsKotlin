@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/qmui_config_color_white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/margin_normal"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/margin_normal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="设备编码" />
+
+        <EditText
+                android:id="@+id/devQueryCodeEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext_background"
+                android:gravity="right"
+                android:hint="请输入"
+                android:padding="@dimen/margin_normal"
+                android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@color/qmui_config_color_white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/margin_normal"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/margin_normal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="设备名称" />
+
+        <EditText
+                android:id="@+id/devQueryNameEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext_background"
+                android:gravity="right"
+                android:hint="请输入"
+                android:padding="@dimen/margin_normal"
+                android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/devQueryActionBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/btn_radius"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_normal"
+            android:paddingBottom="@dimen/margin_normal"
+            android:text="查询"
+            android:textColor="@color/qmui_config_color_white" />
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundButton
+            android:id="@+id/devQueryAllActionBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginRight="40dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="10dp"
+            android:text="查询全部"
+            app:qmui_isRadiusAdjustBounds="true" />
+</merge>

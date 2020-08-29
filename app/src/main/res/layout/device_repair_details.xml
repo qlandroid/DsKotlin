@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ScrollView
+            android:id="@+id/deviceRepairDetailsSl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomTabGroup"
+            android:layout_alignParentTop="true">
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/margin_normal"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingBottom="@dimen/margin_normal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当前单据状态:"
+                        android:textColor="@color/color_number_9" />
+
+                <TextView
+                        android:id="@+id/deviceRepairDetailsStateTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="维修中"
+                        android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/deviceRepairDetailsNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@drawable/ripple_bg"
+                    android:paddingBottom="@dimen/margin_normal"
+                    app:hint="查看设备详细"
+                    app:leftIcon="@drawable/fun_device"
+                    app:rightIconHide="false"
+                    app:title="设备详情">
+
+                <LinearLayout
+                        android:id="@+id/deviceRepairDetailsFailedGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/dp_10"
+                        android:paddingBottom="@dimen/dp_10">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_failed" />
+
+                    <TextView
+                            android:id="@+id/deviceRepairDetailsFailedTextTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="加载失败,点击重新加载"
+                            android:textColor="@color/color_number_9"
+                            android:textSize="12sp" />
+                </LinearLayout>
+
+                <ProgressBar
+                        android:id="@+id/deviceRepairDetailsProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+            </com.feiling.dasong.widget.NavDetailsView>
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/deviceRepairDetailsFaultRemarkNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    app:leftIcon="@drawable/icon_empty_msg"
+                    app:title="故障描述">
+
+                <TextView
+                        android:id="@+id/deviceRepairDetailsFaultRemarkTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        android:background="@drawable/custom_edittext_background"
+                        android:hint="故障描述信息"
+                        android:lineSpacingMultiplier="1.3"
+                        android:minLines="5"
+                        android:padding="10dp"
+                        android:text="萨拉大富科技按时来得快附件爱丽丝快递费静安寺两地分居爱是劳动法静安寺两地分居阿里斯顿咖啡机啊按时来得快房间拉手孔井队否"
+                        android:textIsSelectable="true"
+                        android:textSize="14sp" />
+
+                <com.feiling.dasong.widget.ImgSelectView
+                        android:id="@+id/deviceRepairDetailsImgSelectView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/margin_normal" />
+
+            </com.feiling.dasong.widget.NavDetailsView>
+
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/deviceRepairDetailsTypeNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    app:hint="请选择维修类别"
+                    app:leftIcon="@drawable/fun_my_work_stat"
+                    app:rightIconHide="false"
+                    app:title="维修类别" />
+
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/deviceRepairDetailsRepairMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    android:paddingBottom="@dimen/margin_normal"
+                    app:leftIcon="@drawable/icon_group"
+                    app:title="维修人员信息">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/deviceRepairDetailsRepairMemberRv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/item_nav_details" />
+                </RelativeLayout>
+            </com.feiling.dasong.widget.NavDetailsView>
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/deviceRepairDetailsInvNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    app:leftIcon="@drawable/fun_dev_check"
+                    app:title="消耗配件信息">
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/deviceRepairDetailsInvRv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </com.feiling.dasong.widget.NavDetailsView>
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/deviceRepairDetailsRemarkNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    app:leftIcon="@drawable/icon_empty_msg"
+                    app:title="维修描述">
+
+                <TextView
+                        android:id="@+id/deviceRepairDetailsRemarkTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/margin_normal"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/margin_normal"
+                        android:background="@drawable/custom_edittext_background"
+                        android:hint="故障描述信息"
+                        android:lineSpacingMultiplier="1.3"
+                        android:minLines="5"
+                        android:padding="10dp"
+                        android:textIsSelectable="true"
+                        android:textSize="14sp" />
+
+            </com.feiling.dasong.widget.NavDetailsView>
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/deviceRepairDetailsApplyMemberNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    android:paddingBottom="@dimen/margin_normal"
+                    app:leftIcon="@drawable/icon_group_member"
+                    app:title="申请人信息" />
+
+            <com.feiling.dasong.widget.NavDetailsView
+                    android:id="@+id/deviceRepairDetailsAuditNdv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/qmui_config_color_white"
+                    android:paddingBottom="@dimen/margin_normal"
+                    app:leftIcon="@drawable/icon_group_member"
+                    app:title="审核信息" />
+
+            <Space
+                    android:layout_width="0dp"
+                    android:layout_height="?attr/bottom_empty_height" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <FrameLayout
+            android:id="@+id/bottomTabGroup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_tab_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/qmui_config_color_white"
+            android:visibility="visible">
+
+        <LinearLayout
+                android:id="@+id/bottomTabBtnGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <com.feiling.dasong.widget.DivView
+                android:layout_width="match_parent"
+                android:layout_height="1dp" />
+    </FrameLayout>
+
+
+</merge>

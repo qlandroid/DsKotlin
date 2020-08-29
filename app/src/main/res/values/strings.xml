@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">大松移动端</string>
+
+    <string name="task_status_default">待分配</string>
+    <string name="task_status_pending">待开工</string>
+    <string name="task_status_start">已开工</string>
+    <string name="task_status_end">已完成</string>
+    <string name="task_status_pause">已暂停</string>
+
+    <string name="process_check_status_default">待开工</string>
+    <string name="process_check_status_start">已开工</string>
+    <string name="process_check_status_ok">已合格</string>
+    <string name="process_check_status_failed">不合格</string>
+    <string name="dev_all_select">设备选择</string>
+    <string name="to_scan">扫描</string>
+    <string name="un_verify">未审核</string>
+    <string name="verify">已审核</string>
+    <string name="tag_state_failed">未成功</string>
+    <string name="no_find_data">没有找到数据</string>
+    <string name="click_refresh_data">点击屏幕重新加载</string>
+    <string name="un_start_process">待开工</string>
+    <string name="start_process">已开工</string>
+    <string name="pause_process">已暂停</string>
+    <string name="ok_process">已合格</string>
+    <string name="failed_process">不合格</string>
+    <string name="end_process">已完成</string>
+    <string name="please_input_content">请输入内容</string>
+    <string name="btn_start_process">开工</string>
+    <string name="btn_pause_process">暂停</string>
+    <string name="btn_end_process">完工</string>
+    <string name="btn_handover_process">交接</string>
+    <string name="all_process">全部</string>
+    <string name="element_code">编号</string>
+    <string name="element_job">工作</string>
+    <string name="loading_data">\"加载数据中\"</string>
+    <string name="element_dev_code">设备编号</string>
+    <string name="select_success">选择成功</string>
+    <string name="submit_success">提交成功</string>
+    <string name="worktimer_stat">工时统计</string>
+    <string name="option_record">操作记录</string>
+    <string name="process_plan_option_employee_select">计划操作人员选择</string>
+    <string name="process_plan_option_group_select">计划操作组选择</string>
+    <string name="dev_no_employee_or_group">当前设备没有配置相关负责人员,请通知工段长.添加设备负责人/组</string>
+    <string name="process_cancel">驳回报工</string>
+    <string name="process_cancel_ask">请确定是否取消当前加工工序？取消加工工序，将当前工序重置，当前工序进行重置，需要重新进行派工，以及初始操作！请谨慎操作！</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_ok">确定</string>
+    <string name="btn_send_process">下达</string>
+    <string name="btn_cancel_process">取消</string>
+    <string name="remove_img">删除图片</string>
+    <string name="option_all_process">工艺单</string>
+    <string name="tag_process_current">当前工序</string>
+    <string name="tag_process_end">已完成</string>
+    <string name="tag_process_wait">待处理</string>
+    <string name="btn_cancel">取消</string>
+    <string name="quality_btn_ok">合格</string>
+    <string name="quality_btn_failed">不合格</string>
+    <string name="quality_btn_concession">让步接收</string>
+    <string name="pleace_select_opt_content">请选择操作内容</string>
+    <string name="submiting">提交中</string>
+    <string name="operate_success">操作成功</string>
+
+
+    <plurals name="error_over_count">
+            <item quantity="one">You can only select one media file</item>
+            <item quantity="many">You can only select up to %1$d media files</item>
+    </plurals>
+</resources>

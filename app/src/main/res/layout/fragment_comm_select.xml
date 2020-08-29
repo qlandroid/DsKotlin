@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/qmui_topbar_height"
+            android:fitsSystemWindows="true"
+            app:qmui_skin_background="attr/app_skin_common_background">
+
+        <LinearLayout
+                android:id="@+id/comm_input_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/qmui_config_color_white"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/comm_search_et"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_normal"
+                    android:background="@drawable/custom_edittext_background"
+                    android:hint="请输入筛选内容"
+                    android:padding="@dimen/margin_normal"
+                    android:singleLine="true"
+                    android:textSize="14sp" />
+
+            <TextView
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:id="@+id/comm_search_tv"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:drawableLeft="@drawable/icon_search"
+                    android:paddingLeft="@dimen/margin_normal"
+                    android:textColor="@color/color_number_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="\t查询"/>
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/comm_slt_pull_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/comm_btn_group"
+                android:layout_below="@+id/comm_input_group"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical"
+                android:outlineSpotShadowColor="@color/app_color_red">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/comm_select_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+                android:id="@+id/comm_btn_group"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_tab_height"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.feiling.dasong.widget.EmptyView
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/qmui_topbar_height"
+            android:fitsSystemWindows="true"
+            android:visibility="gone"
+            app:qmui_skin_background="attr/app_skin_common_background" />
+
+    <com.qmuiteam.qmui.widget.QMUITopBarLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true" />
+
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
